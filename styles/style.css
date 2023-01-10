@@ -47,3 +47,12 @@ main #trackInfo h1 {
 main #trackInfo h1 {
 	font-size: 1.605rem;
 }
+
+main #player {
+	width: 11.854rem;
+	height: 6.014rem;
+}
+
+main #player #controlButtons {
+	justify-content: space-between;
+}

@@ -19,3 +19,7 @@
 .column {
 	flex-direction: column;
 }
+
+.flip-horizontal {
+	transform: scaleX(-1);
+}
