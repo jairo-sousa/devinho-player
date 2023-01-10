@@ -12,6 +12,7 @@ body {
 body {
 	background-color: #0f0d13;
 	color: #e1e1e6;
+	font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -19,5 +20,5 @@ main {
 	height: 31.125rem;
 
 	background-color: #2a2141;
-	border-radius: 9.6px;
+	border-radius: 0.6rem;
 }
