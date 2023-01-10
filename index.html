@@ -15,7 +15,7 @@
 				<h1>Track name</h1>
 				<p>Artist</p>
 			</div>
-			<section id="player">
+			<section id="player" class="flex column">
 				<div id="controlButtons" class="flex">
 					<img src="./assets/trackNavArrow.svg" alt="play-backward" />
 					<img src="./assets/playButton.svg" alt="play" />
@@ -25,7 +25,11 @@
 						class="flip-horizontal"
 					/>
 				</div>
-				<div id="trackProgress"></div>
+				<div id="trackProgress" class="flex">
+					<div id="progressBar"></div>
+					<div id="timePlayed">03:20</div>
+					<div id="timeToPlay">00:12</div>
+				</div>
 			</section>
 		</main>
 	</body>
