@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html,
@@ -21,4 +22,11 @@ main {
 
 	background-color: #2a2141;
 	border-radius: 0.6rem;
+}
+
+main img {
+	max-width: 11.854rem;
+	max-height: 11.854rem;
+
+	border-radius: 0.375rem;
 }
