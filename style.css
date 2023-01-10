@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #0f0d13;
+	color: #e1e1e6;
+}
+
+main {
+	width: 16.654rem;
+	height: 31.125rem;
+
+	background-color: #2a2141;
+	border-radius: 9.6px;
+}
