@@ -16,6 +16,23 @@ playPauseButton.addEventListener("click", togglePlayPause);
 playBackward.addEventListener("click", () => changeTime(-10, 81));
 playforward.addEventListener("click", () => changeTime(10, 81));
 
+window.onkeydown = function (event) {
+	try {
+		shortcuts = {
+			" ": togglePlayPause,
+			ArrowLeft: () => {
+				changeTime(-10, track.duration);
+			},
+			ArrowRight: () => {
+				changeTime(10, track.duration);
+			},
+		};
+		shortcuts[event.key]();
+	} catch (e) {
+		console.log(e);
+	}
+};
+
 function togglePlayPause() {
 	if (!trackStatus.playing) {
 		track.play();
