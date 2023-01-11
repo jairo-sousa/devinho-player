@@ -38,8 +38,31 @@ function changeTime(time, totalTime) {
 }
 
 function updateProgress() {
+	const played = convertToMinSec(track.currentTime);
+	const toPlay = convertToMinSec(track.duration - track.currentTime);
+
+	timePlayed.innerText = `${played.minutes}:${played.seconds}`;
+	timeToPlay.innerText = `${toPlay.minutes}:${toPlay.seconds}`;
+
 	progressBar.style.setProperty(
 		"--progress",
 		track.currentTime * (100 / track.duration)
 	);
+}
+
+function convertToMinSec(sec) {
+	const minutes = round(Math, sec / 60);
+	const seconds = round(Math, sec % 60);
+	return { minutes: doubleDigit(minutes), seconds: doubleDigit(seconds) };
+}
+
+function round(math, value) {
+	return math.round(value);
+}
+
+function doubleDigit(value) {
+	if (!(value >= 10)) {
+		value = "0" + value;
+	}
+	return value;
 }
