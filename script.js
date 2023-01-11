@@ -3,10 +3,15 @@ const playPauseButton = document.getElementById("playPauseButton");
 const playBackward = document.getElementById("playBackward");
 const playforward = document.getElementById("playforward");
 
+const progressBar = document.getElementById("progressBar");
+const timePlayed = document.getElementById("timePlayed");
+const timeToPlay = document.getElementById("timeToPlay");
+
 const trackStatus = {
 	playing: false,
 };
 
+track.addEventListener("timeupdate", updateProgress);
 playPauseButton.addEventListener("click", togglePlayPause);
 playBackward.addEventListener("click", () => changeTime(-10, 81));
 playforward.addEventListener("click", () => changeTime(10, 81));
@@ -30,4 +35,11 @@ function changeTime(time, totalTime) {
 		track.currentTime = 0;
 		togglePlayPause();
 	}
+}
+
+function updateProgress() {
+	progressBar.style.setProperty(
+		"--progress",
+		track.currentTime * (100 / track.duration)
+	);
 }
