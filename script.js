@@ -35,14 +35,22 @@ window.onkeydown = function (event) {
 
 function togglePlayPause() {
 	if (!trackStatus.playing) {
-		track.play();
-		trackStatus.playing = true;
-		playPauseButton.src = "./assets/pauseButton.svg";
+		play();
 	} else {
-		track.pause();
-		trackStatus.playing = false;
-		playPauseButton.src = "./assets/playButton.svg";
+		pause();
 	}
+}
+
+function play() {
+	track.play();
+	trackStatus.playing = true;
+	playPauseButton.src = "./assets/pauseButton.svg";
+}
+
+function pause() {
+	track.pause();
+	trackStatus.playing = false;
+	playPauseButton.src = "./assets/playButton.svg";
 }
 
 function changeTime(time, totalTime) {
@@ -50,7 +58,7 @@ function changeTime(time, totalTime) {
 		track.currentTime += time;
 	} else {
 		track.currentTime = 0;
-		togglePlayPause();
+		pause();
 	}
 }
 
@@ -65,6 +73,11 @@ function updateProgress() {
 		"--progress",
 		track.currentTime * (100 / track.duration)
 	);
+
+	if (track.currentTime == track.duration) {
+		track.currentTime = 0;
+		pause();
+	}
 }
 
 function convertToMinSec(sec) {
