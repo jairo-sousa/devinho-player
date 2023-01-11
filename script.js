@@ -13,8 +13,8 @@ const trackStatus = {
 
 track.addEventListener("timeupdate", updateProgress);
 playPauseButton.addEventListener("click", togglePlayPause);
-playBackward.addEventListener("click", () => changeTime(-10, 81));
-playforward.addEventListener("click", () => changeTime(10, 81));
+playBackward.addEventListener("click", () => changeTime(-10, track.duration));
+playforward.addEventListener("click", () => changeTime(10, track.duration));
 
 window.onkeydown = function (event) {
 	try {
@@ -28,8 +28,8 @@ window.onkeydown = function (event) {
 			},
 		};
 		shortcuts[event.key]();
-	} catch (e) {
-		console.log(e);
+	} catch {
+		return null;
 	}
 };
 

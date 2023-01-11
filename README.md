@@ -1,7 +1,5 @@
 <h1 align="center"> Devinho Player </h1>
-<p align="center">player de música <br/>
-EM PRODUÇÃO!
-</p>
+<p align="center">player de música </p>
 
 <a align="center" href="https://jairo-sousa.github.io/devinho-player/">
   <img alt="SNES Calculator preview" src=".github/preview.png">
