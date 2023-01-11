@@ -86,6 +86,9 @@ main #player #trackProgress #progressBar::before {
 	width: calc(var(--progress, 1) * 1%);
 	height: 100%;
 
+	min-width: 1%;
+	max-width: 100%;
+
 	background-color: #d9d9d9;
 	color: transparent;
 	border-radius: 0.6rem;
